@@ -1,5 +1,5 @@
 site:
-  name: AstroWind
+  name: cultural-arts.com
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
@@ -17,10 +17,10 @@ metadata:
     follow: true
   openGraph:
     site_name: AstroWind
-    images:
-      - url: '~/assets/images/default.png'
-        width: 1200
-        height: 628
+    # images:
+    #  - url: '~/assets/images/default.png'
+    #    width: 1200
+    #    height: 628
     type: website
   twitter:
     handle: '@arthelokyo'

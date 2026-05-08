@@ -3,26 +3,26 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Homes',
-      links: [
-        {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
-        },
-        {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
-        },
-        {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
-        },
-      ],
+      text: 'Home',
+      href: getPermalink('/'),
     },
+    {
+      text: 'The Project',
+      href: getBlogPermalink(),
+    },
+    {
+      text: 'News',
+      href: getBlogPermalink(),
+    },
+    {
+      text: 'Services',
+      href: getPermalink('/services'),
+    },
+    {
+      text: 'Contact',
+      href: getPermalink('/contact'),
+    },
+    /**
     {
       text: 'Pages',
       links: [
@@ -39,7 +39,7 @@ export const headerData = {
           href: getPermalink('/pricing'),
         },
         {
-          text: 'About us',
+          text: 'The project',
           href: getPermalink('/about'),
         },
         {
@@ -114,8 +114,9 @@ export const headerData = {
       text: 'Widgets',
       href: '#',
     },
+     */
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/arthelokyo/astrowind', target: '_blank' }],
+  // actions: [{ text: 'Download', href: 'https://github.com/arthelokyo/astrowind', target: '_blank' }],
 };
 
 export const footerData = {
@@ -177,6 +178,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/arthelokyo/astrowind' },
   ],
   footNote: `
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/arthelokyo"> Arthelokyo</a> · All rights reserved.
+    cultural-arts.com
   `,
 };
