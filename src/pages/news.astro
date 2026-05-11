@@ -3,10 +3,10 @@ import type { GetStaticPaths } from 'astro';
 
 import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
-import Headline from '~/components/blog/Headline.astro';
 
 import { getStaticPathsBlogList } from '~/utils/blog';
 import type { Post } from '~/types';
+import Features2 from '~/components/widgets/Features2.astro';
 
 export const prerender = true;
 
@@ -162,10 +162,8 @@ export const postData: Post[] = [
 ---
 
 <Layout metadata={metadata}>
-  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline>
-      Latest News
-    </Headline>
+  <section class="px-6 sm:px-6 mx-auto max-w-4xl">
+    <Features2 title="Latest News" />
     <BlogList posts={postData} />
     <!--
       <PostTags tags={allCategories} class="mb-2" title="Search by Categories:" isCategory />
