@@ -2,7 +2,6 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 
 const metadata = {
@@ -68,15 +67,5 @@ const metadata = {
     },
   ]}
 />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Images', amount: '10K+' },
-      { title: 'Arts', amount: '90K+' },
-      { title: 'Continents', amount: '4' },
-    ]}
-  />
 
 </Layout>
