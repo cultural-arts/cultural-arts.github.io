@@ -1,0 +1,129 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About the Project',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+
+  <Hero
+    tagline="Cultural Heritage Archive"
+    image={{
+      src: '',
+      alt: 'Veneto cultural heritage',
+    }}
+  >
+    <Fragment slot="title">
+      Exploring and preserving
+      <span class="text-accent dark:text-white"> global cultural heritage</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      cultural-arts.com is a long-term data-driven initiative dedicated to documenting,
+      preserving, and showcasing cultural heritage through original visual acquisitions
+      and structured archival research. What began as a focused effort within the Veneto
+      region of Italy has progressively expanded into a broader international archive
+      spanning historical sites, architecture, monuments, and culturally significant
+      locations across the world.
+    </Fragment>
+  </Hero>
+
+  <!-- Statistics -->
+
+  <Stats
+    title="Project in numbers"
+    stats={[
+      { title: 'Images Collected', amount: '10,000+' },
+      { title: 'Cultural Artifacts', amount: '80,000+' },
+      { title: 'Contributors', amount: '40' },
+      { title: 'Acquisition Campaigns', amount: '8' },
+    ]}
+  />
+
+  <!-- Main Description -->
+
+  <Features3
+    title="A meticulously curated cultural archive"
+    subtitle="The project has been developed over several years through direct field acquisition campaigns across the Veneto region."
+    columns={3}
+    items={[
+      {
+        title: 'Original Data Collection',
+        description:
+          'All images and metadata are collected through proprietary acquisition activities. The project does not rely on web scraping or third-party archives.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Regional Coverage',
+        description:
+          'The archive documents buildings, monuments, churches, historical landmarks, and culturally significant locations throughout Veneto.',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Research-Oriented',
+        description:
+          'The dataset is designed to support cultural exploration, historical research, digital preservation, and educational initiatives.',
+        icon: 'tabler:search',
+      },
+    ]}
+  />
+
+  <!-- Process -->
+
+  <Steps2
+    title="How the archive was built"
+    subtitle="The database was created through coordinated acquisition campaigns conducted by a distributed team operating throughout the region."
+    items={[
+      {
+        title: 'Field Acquisition Campaigns',
+        description:
+          'Eight dedicated acquisition campaigns were organized to systematically capture and catalog culturally significant sites.',
+      },
+      {
+        title: 'Distributed Local Team',
+        description:
+          'Approximately 40 contributors participated in the project, ensuring broad territorial coverage and detailed documentation.',
+      },
+      {
+        title: 'Continuous Expansion',
+        description:
+          'While the primary focus remains Italy, selected European locations are occasionally included to provide broader cultural context.',
+      },
+    ]}
+  />
+
+  <!-- Mission -->
+
+  <Steps2
+    title="Project Mission"
+    subtitle="The project's mission is to create a comprehensive and well-structured archive that supports cultural exploration, historical research, digital preservation, and educational initiatives."
+    isReversed={true}
+    items={[
+      {
+        title: 'Preservation',
+        description:
+          'To digitally preserve architectural and cultural heritage for future generations.',
+        icon: 'tabler:building-monument',
+      },
+      {
+        title: 'Accessibility',
+        description:
+          'To make cultural heritage more accessible to researchers, enthusiasts, and the public.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Documentation',
+        description:
+          'To create a reliable and structured visual archive built from authentic and verifiable sources.',
+        icon: 'tabler:archive',
+      },
+    ]}
+  />
+</Layout>
