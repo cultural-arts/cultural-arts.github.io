@@ -1,0 +1,175 @@
+---
+import type { GetStaticPaths } from 'astro';
+
+import Layout from '~/layouts/PageLayout.astro';
+import BlogList from '~/components/blog/List.astro';
+import Headline from '~/components/blog/Headline.astro';
+
+import { getStaticPathsBlogList } from '~/utils/blog';
+import type { Post } from '~/types';
+
+export const prerender = true;
+
+export const getStaticPaths = (async ({ paginate }) => {
+  return await getStaticPathsBlogList({ paginate });
+}) satisfies GetStaticPaths;
+
+
+// const allCategories = await findCategories();
+// const allTags = await findTags();
+
+const metadata = {
+  title: "Latest News",
+};
+
+export const postData: Post[] = [
+  {
+    id: "vlm-beta-2025",
+    slug: "visual-language-model-assistant-beta",
+    permalink: "",
+    publishDate: new Date("2025-08-01"),
+    title: "Visual Language Model Assistant (Beta) Now Live!",
+    excerpt:
+      "A browser-based generative AI assistant for cultural heritage, art exploration, and creative research. Runs fully in the browser and is currently in Beta."
+  },
+  {
+    id: "services-2024",
+    slug: "new-services-cultural-arts",
+    permalink: "",
+    publishDate: new Date("2024-03-01"),
+    title: "New services unveiled on cultural-arts.com",
+    excerpt:
+      "Introduction of experimental AI services including a cultural image recognition web app and a dedicated Services page for trials and updates."
+  },
+  {
+    id: "ai-shield-v0",
+    slug: "ai-shield-v0",
+    permalink: "",
+    publishDate: new Date("2024-02-01"),
+    title: "AI-Shield v0: Safeguarding cultural-arts.com",
+    excerpt:
+      "A MobileNetV2-based AI moderation model that classifies uploaded images as Accepted or Garbage to protect system integrity."
+  },
+  {
+    id: "art-db-expansion-2023",
+    slug: "art-database-expansion-italy",
+    permalink: "/blog/art-database-expansion-italy",
+    publishDate: new Date("2023-08-01"),
+    title: "Art Database Expansion",
+    excerpt:
+      "The cultural-arts database expanded to cover all Italian regions, reaching over 80,000 artworks including monuments, buildings, and historical sites."
+  },
+  {
+    id: "ai-services-phase",
+    slug: "ai-and-services-development",
+    permalink: "/blog/ai-and-services-development",
+    publishDate: new Date("2023-05-01"),
+    title: "AI & Services",
+    excerpt:
+      "Foundational development phase of the AI system and service architecture for cultural-arts platform features."
+  },
+  {
+    id: "campaign-8",
+    slug: "campaign-8-launch",
+    permalink: "/blog/campaign-8-launch",
+    publishDate: new Date("2022-06-01"),
+    title: "Campaign #8 Launch",
+    excerpt:
+      "Final acquisition campaign launched with 22 participants committed to the cultural-arts mission."
+  },
+  {
+    id: "campaign-7",
+    slug: "campaign-7-commencement",
+    permalink: "/blog/campaign-7-commencement",
+    publishDate: new Date("2022-05-01"),
+    title: "Campaign #7 Commencement",
+    excerpt:
+      "Seventh acquisition campaign started with 20 participants supporting the initiative."
+  },
+  {
+    id: "campaign-6",
+    slug: "campaign-6-start",
+    permalink: "/blog/campaign-6-start",
+    publishDate: new Date("2022-03-01"),
+    title: "Campaign #6 Start",
+    excerpt:
+      "Sixth campaign launched with 18 participants contributing to the cultural-arts vision."
+  },
+  {
+    id: "campaign-5",
+    slug: "campaign-5-launch",
+    permalink: "/blog/campaign-5-launch",
+    publishDate: new Date("2021-11-01"),
+    title: "Campaign #5 Launch",
+    excerpt:
+      "Fifth acquisition campaign initiated with 15 participants joining the project."
+  },
+  {
+    id: "campaign-4",
+    slug: "campaign-4-kickoff",
+    permalink: "/blog/campaign-4-kickoff",
+    publishDate: new Date("2021-08-01"),
+    title: "Campaign #4 Kickoff",
+    excerpt:
+      "Fourth campaign launched with 12 participants advancing the cultural-arts mission."
+  },
+  {
+    id: "campaign-3",
+    slug: "campaign-3-initiation",
+    permalink: "/blog/campaign-3-initiation",
+    publishDate: new Date("2021-07-01"),
+    title: "Campaign #3 Initiation",
+    excerpt:
+      "Third acquisition campaign began with 10 participants contributing to cultural innovation."
+  },
+  {
+    id: "campaign-2",
+    slug: "campaign-2-launch",
+    permalink: "/blog/campaign-2-launch",
+    publishDate: new Date("2021-04-01"),
+    title: "Campaign #2 Launch",
+    excerpt:
+      "Second acquisition campaign launched with 8 participants joining the mission."
+  },
+  {
+    id: "campaign-1",
+    slug: "campaign-1-kickoff",
+    permalink: "/blog/campaign-1-kickoff",
+    publishDate: new Date("2021-03-01"),
+    title: "Campaign #1 Kickoff",
+    excerpt:
+      "First acquisition campaign initiated with 5 participants starting the cultural-arts journey."
+  },
+  {
+    id: "infra-progress-2020",
+    slug: "project-infrastructure-progress",
+    permalink: "/blog/project-infrastructure-progress",
+    publishDate: new Date("2020-10-01"),
+    title: "Project Infrastructure Progress",
+    excerpt:
+      "Project infrastructure moved into production, marking a key milestone in system development."
+  },
+  {
+    id: "project-start-2020",
+    slug: "project-commencement",
+    permalink: "/blog/project-commencement",
+    publishDate: new Date("2020-01-01"),
+    title: "Project Commencement",
+    excerpt:
+      "The cultural-arts project officially started, initiating its mission to merge art and technology."
+  }
+];
+---
+
+<Layout metadata={metadata}>
+  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+    <Headline>
+      Latest News
+    </Headline>
+    <BlogList posts={postData} />
+    <!--
+      <PostTags tags={allCategories} class="mb-2" title="Search by Categories:" isCategory />
+      <PostTags tags={allTags}  title="Search by Tags:" />
+    -->
+  </section>
+</Layout>
