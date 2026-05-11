@@ -1,9 +1,9 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
 
 const metadata = {
   title: 'Cultural-arts - grow you culture by sharing arts',
@@ -14,34 +14,24 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-      { text: 'Learn more', href: '#features' },
-    ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+  <Hero2
+    tagline="Web App"
+    image={{
+      src: '~/assets/images/cultural_arts_webapp_qr.svg',
+      alt: '',
+    }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white"> Astro 5.0</span> + Tailwind CSS
+      [BETA] AI cultural companion <span
+        class="hidden xl:inline">for visual discovery</span
+      >
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+        Take a picture of any cultural heritage artifact by using your mobile phone camera and get instant insights.
     </Fragment>
-  </Hero>
+
+  </Hero2>
 
   <!-- FAQs Widget ******************* -->
 
