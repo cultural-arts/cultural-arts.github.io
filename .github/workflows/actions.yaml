@@ -44,9 +44,14 @@ jobs:
       - name: Build Flutter Web
         run: |
           cd flutter
+
+          FLUTTER_SHA=$(git rev-parse --short HEAD)
+
           flutter pub get
+
           flutter config --enable-web
-          flutter build web --release --base-href /contributor/ --dart-define=APP_VERSION=${GITHUB_SHA::7}
+
+          flutter build web --release --base-href /contributor/ --dart-define=APP_VERSION=${FLUTTER_SHA}
 
       - name: Copy Flutter into Astro public
         run: |
