@@ -26,6 +26,32 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # ---------- Flutter build ----------
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.41.7'
+
+      - name: Checkout Flutter repo
+        uses: actions/checkout@v4
+        with:
+          repository: cultural-arts/cultural-arts-app-flutter
+          path: flutter
+
+      - name: Build Flutter Web
+        run: |
+          cd flutter
+          flutter pub get
+          flutter config --enable-web
+          flutter build web --release --base-href /contributor/
+
+      - name: Copy Flutter into Astro public
+        run: |
+          rm -rf public/contributor
+          mkdir -p public/contributor
+          cp -r flutter/build/web/* public/contributor/
+
+      # ---------- Astro build ----------
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -38,16 +64,3 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    runs-on: ubuntu-latest
-    needs: build
-
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
