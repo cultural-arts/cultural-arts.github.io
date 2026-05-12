@@ -8,7 +8,10 @@ on:
       - main
 
     # manual run
-  workflow_dispatch: 
+  workflow_dispatch:
+
+  repository_dispatch:
+    types: [flutter-update]
 
 permissions:
   contents: read
