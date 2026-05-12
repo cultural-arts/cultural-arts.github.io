@@ -46,7 +46,7 @@ jobs:
           cd flutter
           flutter pub get
           flutter config --enable-web
-          flutter build web --release --base-href /contributor/
+          flutter build web --release --base-href /contributor/ --dart-define=APP_VERSION=${GITHUB_SHA::7}
 
       - name: Copy Flutter into Astro public
         run: |
