@@ -29,7 +29,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # ---------- Flutter build ----------
+      # ---------- Contributor Flutter build ----------
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -41,7 +41,7 @@ jobs:
           repository: cultural-arts/cultural-arts-app-flutter
           path: flutter
 
-      - name: Build Flutter Web
+      - name: Build Flutter Contributor
         run: |
           cd flutter
 
@@ -58,6 +58,38 @@ jobs:
           rm -rf public/contributor
           mkdir -p public/contributor
           cp -r flutter/build/web/* public/contributor/
+
+      # ---------- Ai Companion Flutter build ----------
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.41.7'
+
+      - name: Checkout Flutter repo
+        uses: actions/checkout@v4
+        with:
+          repository: cultural-arts/cultural-arts-app-flutter
+          path: flutter
+          ref: feature/20250801_lightweight_vlm
+          fetch-depth: 0
+
+      - name: Build Flutter AI Companion
+        run: |
+          cd flutter
+
+          FLUTTER_SHA=$(git rev-parse --short HEAD)
+
+          flutter pub get
+
+          flutter config --enable-web
+
+          flutter build web --release --base-href /ai-companion/ --dart-define=APP_VERSION=${FLUTTER_SHA}
+
+      - name: Copy Flutter into Astro public
+        run: |
+          rm -rf public/ai-companion
+          mkdir -p public/ai-companion
+          cp -r flutter/build/web/* public/ai-companion/
 
       # ---------- Astro build ----------
       - uses: actions/setup-node@v4
