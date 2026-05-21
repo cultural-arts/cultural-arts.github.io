@@ -28,23 +28,6 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Project',
-      links: [
-        { text: 'Overview', href: '#' },
-        { text: 'Capabilities', href: '#' },
-        { text: 'Collaborations', href: '#' },
-        { text: 'Resources', href: '#' },
-      ],
-    },
-    {
-      title: 'Platform',
-      links: [
-        { text: 'Technology', href: '#' },
-        { text: 'API', href: '#' },
-        { text: 'Partners', href: '#' },
-      ],
-    },
-    {
       title: 'Organization',
       links: [
         { text: 'About', href: '#' },
