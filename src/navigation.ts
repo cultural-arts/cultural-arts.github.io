@@ -30,7 +30,7 @@ export const footerData = {
     {
       title: 'Organization',
       links: [
-        { text: 'About', href: '#' },
+        { text: 'About', href: '/orgabout' },
         { text: 'Funding & Sponsors', href: '/founding-sponsors' },
         { text: 'News', href: getPermalink('/news') },
         { text: 'Contact', href: getPermalink('/contact') },

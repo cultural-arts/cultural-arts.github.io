@@ -1,0 +1,31 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Funding & Sponsors',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-6 mx-auto max-w-4xl">
+
+    <Features2
+      title="About us"
+    />
+
+    <div class="mb-10 space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+
+      <p>
+        This organization focuses on building open, practical systems at the intersection of artificial intelligence, cultural heritage, and applied research.
+        It develops tools and services that aim to make cultural and technical knowledge more accessible, usable, and sustainable over time.
+      </p>
+
+      <p>
+        The work is driven by independent research and supported by contributors who share a long-term vision for responsible, human-centered technology.
+      </p>
+
+    </div>
+
+  </section>
+</Layout>
