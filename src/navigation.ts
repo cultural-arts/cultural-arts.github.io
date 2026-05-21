@@ -31,9 +31,8 @@ export const footerData = {
       title: 'Organization',
       links: [
         { text: 'About', href: '#' },
-        { text: 'Funding & Sponsors', href: '#' },
+        { text: 'Funding & Sponsors', href: '/founding-sponsors' },
         { text: 'News', href: getPermalink('/news') },
-        { text: 'Legal Notice', href: '#' },
         { text: 'Contact', href: getPermalink('/contact') },
       ],
     }

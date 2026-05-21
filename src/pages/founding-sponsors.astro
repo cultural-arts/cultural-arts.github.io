@@ -1,0 +1,45 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Funding & Sponsors',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-6 mx-auto max-w-4xl">
+
+    <Features2
+      title="Funding & Sponsors"
+      subtitle="How this project is supported and how you can contribute."
+    />
+
+    <div class="mb-10 space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+
+      <p>
+        This project is currently supported by individual contributors who believe in
+        open research, cultural preservation, and the development of practical AI systems.
+        Their support helps maintain infrastructure, develop new features, and keep the platform accessible.
+      </p>
+
+      <p>
+        There are no large institutional sponsors at the moment. Instead, the project grows through
+        small, direct contributions from people who share its goals and want to see it evolve over time.
+      </p>
+
+      <p>
+        If you are interested in supporting the project — financially, technically, or through collaboration —
+        feel free to get in touch. Contributions of any size or form are welcome, whether they are one-time
+        or ongoing.
+      </p>
+
+      <p>
+        You can contact us by email to discuss sponsorships, partnerships,
+        or other ways to contribute.
+      </p>
+
+    </div>
+
+  </section>
+</Layout>
