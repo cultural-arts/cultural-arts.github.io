@@ -98,8 +98,6 @@ However, no system can guarantee absolute security.
 
 The platform software is open source and available for research and transparency purposes.
 
-This privacy policy applies only to uploaded content, not to the software code itself.
-
 ---
 
 ## 9. Cookies
@@ -114,3 +112,9 @@ For privacy-related questions or requests:
 
 **Email:** info@cultural-arts.com
 **Project:** cultural-arts.com
+
+---
+
+We reserve the right to update these Terms and the Privacy Policy at any time. Continued use of the platform after any changes constitutes acceptance of the updated terms.
+
+---

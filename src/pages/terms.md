@@ -60,3 +60,7 @@ We reserve the right to remove or restrict access to content that is illegal, ha
 All content is provided “as is”. We are not responsible for accuracy, authenticity, or misuse of submitted material.
 
 ---
+
+We reserve the right to update these Terms and the Privacy Policy at any time. Continued use of the platform after any changes constitutes acceptance of the updated terms.
+
+---
