@@ -13,8 +13,7 @@ We respect your privacy and are committed to minimizing the personal data collec
 
 We collect only the minimum data necessary to operate and secure the platform:
 
-- Uploaded photographs and any metadata included with them
-- Basic technical data such as IP address, device information, and access logs (for security, abuse prevention, and system maintenance, where legally applicable)
+- Uploaded photographs and any metadata included with them such as gps location, device information and exif data
 
 We do not require user accounts, names, or profiles.
 
@@ -24,13 +23,13 @@ We do not intentionally collect sensitive personal data.
 
 ## 2. How we use data
 
-We use the collected data exclusively for:
+We use the collected data for:
 
 - Storing and preserving cultural heritage content
-- Providing access to the public archive
+- Providing access to the archive
 - Supporting research and educational use
-- Maintaining platform security, integrity, and reliability
-- Preventing abuse, fraud, or illegal activity
+- Develop new services aligned with the goal of the project
+- Develop Artificial Intelligence algorithms for cultural heritage
 
 ---
 
@@ -99,11 +98,17 @@ However, no system can guarantee absolute security.
 
 The platform software is open source and available for research and transparency purposes.
 
-This privacy policy applies only to user data and uploaded content, not to the software code itself.
+This privacy policy applies only to uploaded content, not to the software code itself.
 
 ---
 
-## 9. Contact
+## 9. Cookies
+
+We use only technical cookies to operate the official website.
+
+---
+
+## 10. Contact
 
 For privacy-related questions or requests:
 
