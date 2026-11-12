@@ -70,7 +70,7 @@ jobs:
         with:
           repository: cultural-arts/cultural-arts-app-flutter
           path: flutter
-          ref: feature/20250801_lightweight_vlm
+          ref: feature/20261111_mistral_api
           fetch-depth: 0
 
       - name: Build Flutter AI Companion
